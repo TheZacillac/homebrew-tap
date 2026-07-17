@@ -1,25 +1,25 @@
 class Seer < Formula
   desc "Interactive CLI for Seer domain name utilities"
   homepage "https://github.com/TheZacillac/seer"
-  version "0.43.1"
+  version "0.44.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.43.1/seer-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "2615eb77de8c80b6260a314abd4ece519f50fd3f0351fb7161f17a159fefae9f"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.44.0/seer-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "6f9a4bd45a61b8bf9a2b72ce3ce8c5078ac4d99a1e1adb14d5aa149d05bdbe16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.43.1/seer-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "771c84bd020bc8febe44a3df1c4863a255eb2afbee78aec0c7f74aaf35809e23"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.44.0/seer-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "730ee18d735ee5adac64cc11528262107e8cbea6a539e3837bc7b215fc683f1d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.43.1/seer-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "617adf8532d1d56e3266daa0d572a80aefbc30c008a8a525e5fcd36523d4c6ea"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.44.0/seer-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3bd0df51f0acfd28ab60fd1a6de954e6bec0ec9a5329daaea4965faa21874f4d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.43.1/seer-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ddd1825f3c7bfbaa64fbe8c280c3a1f13c1a1cc80460eef247a2e14f89d64d51"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.44.0/seer-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9f78a20791d39a152977196868f5a46e06fbb4e19a5666fd87d8c84b7e7423e9"
     end
   end
   license "MIT"
