@@ -1,25 +1,25 @@
 class Seer < Formula
   desc "Interactive CLI for Seer domain name utilities"
   homepage "https://github.com/TheZacillac/seer"
-  version "0.46.0"
+  version "0.47.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.46.0/seer-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "f1d3291cd47fed86a8bacffa5adbdcedfa17214c84d54cba1b543e72053f9677"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.47.0/seer-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "f7412884ef92160d2da331c2fab2a3a1b0e24dfe82dc1e137bb1e57cbaa9d0fc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.46.0/seer-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b2bd7d2550f8248e8b74253ef26a50923cda227612c3749e58e45a1efe2e0b01"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.47.0/seer-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "af4600146b11375c2a1533946b7ee24b71e5c5d722c3a19267d1fa0ac3b49791"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.46.0/seer-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "380fe35e86853da2b6cbecc9ab89db09ddbf73e6cb59301efe33ece2eef62098"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.47.0/seer-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7550650a7a432042ce2d1c38e7a0ce4ce6574414068923630df4822eedd099a7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheZacillac/seer/releases/download/v0.46.0/seer-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8b108414adba37dfd144e689deb2b1cce1a9853e86a80275a04dbc8b1ee8208c"
+      url "https://github.com/TheZacillac/seer/releases/download/v0.47.0/seer-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d56e192bfb639d1d8574a407aa4b03f91912a96333f5c705a3034213dc4ec72d"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Seer < Formula
   end
 
   def install
-    bin.install "seer" if OS.mac? && Hardware::CPU.arm?
-    bin.install "seer" if OS.mac? && Hardware::CPU.intel?
-    bin.install "seer" if OS.linux? && Hardware::CPU.arm?
-    bin.install "seer" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "seer"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "seer"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "seer"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "seer"
+    end
 
     install_binary_aliases!
 
